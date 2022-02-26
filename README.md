@@ -18,5 +18,5 @@ docker run -it --rm -e CONNECTIONS_COUNT=500 -e TARGETS="https://www.google.com/
 ## How to use with just Docker
 
 ```sh
-docker run -it --rm -e CONNECTIONS_COUNT=500 -e TARGETS="https://www.google.com/" -e REFRESH_RATE=500 alex-popov-tech/piu-piu:latest
+docker run -it --rm -e CONNECTIONS_COUNT=500 -e TARGETS="https://www.google.com/" -e REFRESH_RATE=500 aleksanderpopov/piu-piu:latest
 ```
