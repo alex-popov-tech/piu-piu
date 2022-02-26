@@ -1,0 +1,15 @@
+{
+  "name": "piu-piu",
+  "version": "0.0.1",
+  "description": "simple request infinite request bombarding tool",
+  "main": "piu-piu.js",
+  "scripts": {
+    "test": "echo 'none'"
+  },
+  "author": "Alexander Popov (alex.popov.tech@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "console-table-printer": "^2.10.0"
+  }
+}
