@@ -8,7 +8,7 @@ assert.match(CONNECTIONS_COUNT, /\d+/g, `"CONNECTIONS_COUNT" should be integer, 
 assert.match(REFRESH_RATE, /\d+/g, `"REFRESH_RATE" should be integer, but was: "${REFRESH_RATE}"`);
 assert.match(TARGETS, /\w+/g, `"CONNECTIONS_COUNT" should be integer, but was: "${CONNECTIONS_COUNT}"`);
 
-const count = parseInt(CONNECTIONS_COUNT, 10);
+const connectionCount = parseInt(CONNECTIONS_COUNT, 10);
 const refreshRate = parseInt(REFRESH_RATE, 10);
 const targets = TARGETS.split(',')
   .map((it) => it.trim())
@@ -49,7 +49,7 @@ const startRequest = async (url) => {
 (async () => {
   const start = Date.now();
   for (const url of targets) {
-    Array(count)
+    Array(connectionCount / targets.length)
       .fill('')
       .forEach(() => startRequest(url));
   }
