@@ -49,7 +49,7 @@ const startRequest = async (url) => {
 (async () => {
   const start = Date.now();
   for (const url of targets) {
-    Array(connectionCount / targets.length)
+    Array(Math.round(connectionCount / targets.length))
       .fill('')
       .forEach(() => startRequest(url));
   }
